@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入初始化模块 -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <!-- 引入自己的css模块 -->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <!-- 顶部nav -->
+    <div class="nav">
+        <div class="email">
+            <a href="#"></a>
+        </div>
+        <div class="header_logo">
+            <a href="#"></a>
+        </div>
+        <div class="search">
+            <a href="#">
+                <span class="iconfont icon-search"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- banner图 -->
+    <div class="banner">
+        <img src="#" alt="" id="banner_pic">
+    </div>
+
+    <!-- 就业课 -->
+    <div class="work_course">
+        <h3 class="course_type">·&nbsp;就&nbsp;业&nbsp;课&nbsp;·</h3>
+        <ul class="course_list">
+            <li>
+                <a href="#">
+                    <img src="./images/fe-list.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/python.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/ui.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/java.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/data.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/python.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 微课 -->
+    <div class="samll_course">
+        <h3 class="course_type">·&nbsp;微&nbsp;&nbsp;课&nbsp;·</h3>
+        <!-- 通过art-template模板添加 -->
+        <ul class="course_info"></ul>
+    </div>
+
+    <!-- 底部导航栏 -->
+
+    <footer>
+        <div class="home">
+            <a href="./index.html">
+                <span class="iconfont icon-cangpeitubiao-shouye"></span>
+                <p>首页</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="./category.html">
+                <span class="iconfont icon-fenlei"></span>
+                <p>分类</p>
+            </a>
+        </div>
+    </footer>
+
+
+    <!-- 定义微课的详细列表 -->
+    <script type="text/html" id="tpl-list">
+        {{each data}}
+        <li>
+            <a href="javscript:;">
+                <img src="{{$value.img}}" alt="">
+                <p>{{$value.name}}</p>
+                <div class="price">
+                    <h3>{{$value.count}}人学习</h3>
+                    <span>￥{{$value.price}}</span>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 引入jquery -->
+    <script src="./js/jquery.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./js/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
